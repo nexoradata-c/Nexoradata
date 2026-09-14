@@ -1,85 +1,296 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
     <title>NEXORADATA | Transformamos datos en decisiones</title>
 
     <link rel="stylesheet" href="style.css">
+
+
 </head>
+<!-- =========================================================
+     VISOR DASHBOARD
+========================================================= -->
+
+<div class="dashboard-modal" id="dashboardModal">
+
+    <div class="dashboard-modal-overlay"></div>
+
+    <div class="dashboard-modal-content">
+
+        <button
+            class="dashboard-modal-close"
+            type="button"
+            aria-label="Cerrar dashboard"
+        >
+            ×
+        </button>
+
+        <img
+            src="dashboard-ventas.png"
+            alt="Dashboard de Ventas"
+        >
+
+    </div>
+
+</div>
 
 <body>
 
-    <!-- NAVEGACIÓN -->
+    <!-- =========================================================
+     HEADER
+========================================================= -->
+
     <header>
 
-        <a href="#" class="logo">
+
+        <a href="#inicio" class="logo" aria-label="NEXORADATA - Inicio">
             <img src="logo-nexoradata.png" alt="NEXORADATA">
         </a>
 
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
+            <a href="#portfolio">Portfolio</a>
             <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Contacto</a>
+
         </nav>
 
-        <a href="#contacto" class="btn-nav">Hablemos</a>
 
     </header>
 
+    <!-- =========================================================
+     HERO
+========================================================= -->
 
-    <!-- INICIO -->
     <section id="inicio" class="hero">
+
 
         <div class="hero-text">
 
-            <p class="tag">DATA • AUTOMATIZACIÓN • CRECIMIENTO</p>
+            <div class="tag">
+                DATA <span>•</span> AUTOMATIZACIÓN <span>•</span> CRECIMIENTO
+            </div>
 
             <h1>
-                Transformamos datos
-                <span>en decisiones.</span>
+                Transformamos
+                <span>datos en decisiones.</span>
             </h1>
 
             <p class="hero-description">
-                Ayudamos a negocios a entender sus ventas,
-                optimizar su stock y automatizar procesos
-                para tomar mejores decisiones.
+                Ayudamos a empresas a ordenar, analizar y visualizar
+                su información para convertir datos en oportunidades
+                de crecimiento.
             </p>
 
             <div class="hero-buttons">
 
-                <a href="#contacto" class="btn-primary">
-                    Solicitar una consulta →
+                <a href="#portfolio" class="btn-primary">
+                    Ver proyectos
+                    <span>→</span>
                 </a>
 
-                <a href="#servicios" class="btn-secondary">
-                    Ver servicios
+                <a href="#contacto" class="btn-secondary">
+                    Hablemos
                 </a>
 
             </div>
 
         </div>
 
+
+        <!-- HERO VISUAL -->
 
         <div class="hero-visual">
 
-            <div class="dashboard-card">
+            <div class="dashboard">
 
-                <div class="chart-title">
-                    Ventas mensuales
+                <!-- DASHBOARD PRINCIPAL -->
+
+                <div class="main-dashboard">
+
+                    <div class="dashboard-top">
+                        <span>Ventas</span>
+
+                        <span class="growth">
+                            +24.8%
+                        </span>
+                    </div>
+
+                    <div class="sales-value">
+                        $7.691.823
+                    </div>
+
+                    <div class="sales-label">
+                        Ventas netas
+                    </div>
+
+                    <div class="line-chart">
+
+                        <svg viewBox="0 0 400 160" preserveAspectRatio="none">
+
+                            <defs>
+
+                                <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+
+                                    <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.28" />
+
+                                    <stop offset="100%" stop-color="#00e5ff" stop-opacity="0" />
+
+                                </linearGradient>
+
+                            </defs>
+
+                            <path class="chart-area" d="M0,125
+                        C35,118 50,105 75,110
+                        C105,116 110,90 140,95
+                        C165,100 180,72 205,80
+                        C230,88 235,60 265,65
+                        C295,70 300,45 330,52
+                        C350,57 375,35 400,20
+                        L400,160
+                        L0,160 Z" />
+
+                            <path class="chart-line" d="M0,125
+                        C35,118 50,105 75,110
+                        C105,116 110,90 140,95
+                        C165,100 180,72 205,80
+                        C230,88 235,60 265,65
+                        C295,70 300,45 330,52
+                        C350,57 375,35 400,20" />
+
+                        </svg>
+
+                    </div>
+
                 </div>
 
-                <div class="chart">
 
-                    <div class="bar bar1"></div>
-                    <div class="bar bar2"></div>
-                    <div class="bar bar3"></div>
-                    <div class="bar bar4"></div>
-                    <div class="bar bar5"></div>
-                    <div class="bar bar6"></div>
+                <!-- EVOLUCIÓN -->
+
+                <div class="floating-card evolution-card">
+
+                    <div class="small-title">
+                        EVOLUCIÓN
+                    </div>
+
+                    <div class="bar-chart">
+
+                        <div class="chart-bar" style="height:35%"></div>
+                        <div class="chart-bar" style="height:48%"></div>
+                        <div class="chart-bar" style="height:42%"></div>
+                        <div class="chart-bar" style="height:62%"></div>
+                        <div class="chart-bar" style="height:55%"></div>
+                        <div class="chart-bar" style="height:78%"></div>
+                        <div class="chart-bar" style="height:92%"></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STOCK -->
+
+                <div class="floating-card stock-card">
+
+                    <div class="stock-circle">
+                        <div class="stock-inner">
+                            72%
+                        </div>
+                    </div>
+
+                    <div class="stock-title">
+                        STOCK DISPONIBLE
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCTOS -->
+
+                <div class="products-card">
+
+                    <div class="small-title">
+                        PRODUCTOS
+                    </div>
+
+                    <div class="product-row">
+                        <span class="product-dot blue"></span>
+                        <span>Laptop Pro 14</span>
+                        <strong>45%</strong>
+                    </div>
+
+                    <div class="product-row">
+                        <span class="product-dot cyan"></span>
+                        <span>Escritorio</span>
+                        <strong>28%</strong>
+                    </div>
+
+                    <div class="product-row">
+                        <span class="product-dot purple"></span>
+                        <span>Monitor 27</span>
+                        <strong>17%</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- AUTOMATIZACIÓN -->
+
+                <div class="automation-card">
+
+                    <div class="automation-item">
+
+                        <div class="automation-icon">
+                            ↗
+                        </div>
+
+                        <strong>
+                            Datos procesados
+                        </strong>
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                    </div>
+
+                    <div class="automation-item">
+
+                        <div class="automation-icon">
+                            ◈
+                        </div>
+
+                        <strong>
+                            Información organizada
+                        </strong>
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                    </div>
+
+                    <div class="automation-item">
+
+                        <div class="automation-icon">
+                            ◉
+                        </div>
+
+                        <strong>
+                            Dashboard generado
+                        </strong>
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                    </div>
 
                 </div>
 
@@ -87,77 +298,103 @@
 
         </div>
 
+
     </section>
 
+    <!-- =========================================================
+     SERVICIOS
+========================================================= -->
 
-    <!-- SERVICIOS -->
     <section id="servicios" class="services">
 
-        <div class="section-title">
+        <div class="section-heading">
 
-            <p>LO QUE HACEMOS</p>
+            <p>
+                LO QUE HACEMOS
+            </p>
 
             <h2>
-                Soluciones para entender
-                <span>mejor tu negocio.</span>
+                Datos que ayudan a
+                <span>tomar mejores decisiones.</span>
             </h2>
+
+            <div class="section-line"></div>
 
         </div>
 
 
         <div class="services-grid">
 
+            <!-- SERVICIO 1 -->
+
             <div class="service-card">
 
-                <div class="icon">📈</div>
+                <span class="service-number">
+                    01
+                </span>
 
-                <h3>Análisis de ventas</h3>
+                <div class="service-icon sales-icon">
+                    <span>↗</span>
+                </div>
+
+                <h3>
+                    Análisis de ventas
+                </h3>
 
                 <p>
-                    Descubrí qué productos, clientes y períodos
-                    generan mejores resultados.
+                    Analizamos tus ventas, productos,
+                    clientes y canales para identificar
+                    tendencias y oportunidades.
                 </p>
 
             </div>
 
 
+            <!-- SERVICIO 2 -->
+
             <div class="service-card">
 
-                <div class="icon">📦</div>
+                <span class="service-number">
+                    02
+                </span>
 
-                <h3>Control de stock</h3>
+                <div class="service-icon stock-icon">
+                    <span>◫</span>
+                </div>
+
+                <h3>
+                    Control de stock
+                </h3>
 
                 <p>
-                    Organizá tu inventario e identificá
-                    oportunidades para mejorar la gestión.
+                    Organizamos la información de inventario
+                    para ayudarte a conocer qué tenés,
+                    qué necesitás y qué está funcionando.
                 </p>
 
             </div>
 
 
-            <div class="service-card">
-
-                <div class="icon">🤖</div>
-
-                <h3>Automatización</h3>
-
-                <p>
-                    Reducí tareas repetitivas y ahorrá
-                    tiempo en procesos manuales.
-                </p>
-
-            </div>
-
+            <!-- SERVICIO 3 -->
 
             <div class="service-card">
 
-                <div class="icon">📊</div>
+                <span class="service-number">
+                    03
+                </span>
 
-                <h3>Dashboards</h3>
+                <div class="service-icon dashboard-icon">
+                    <span></span>
+                </div>
+
+                <h3>
+                    Dashboards
+                </h3>
 
                 <p>
-                    Visualizá toda la información importante
-                    de tu negocio en un solo lugar.
+                    Transformamos datos complejos en
+                    visualizaciones claras y fáciles de
+                    interpretar.
                 </p>
 
             </div>
@@ -166,18 +403,47 @@
 
     </section>
 
+    <!-- =========================================================
+     PORTFOLIO
+========================================================= -->
 
-    <!-- PORTFOLIO -->
     <section id="portfolio" class="portfolio">
 
-        <div class="section-title">
+        <div class="portfolio-header">
 
-            <p>PORTFOLIO</p>
+            <div class="portfolio-label">
 
-            <h2>
-                Datos convertidos en
-                <span>resultados.</span>
-            </h2>
+                <span class="portfolio-label-line"></span>
+
+                PORTFOLIO
+
+                <span class="portfolio-label-line"></span>
+
+            </div>
+
+
+            <div class="portfolio-heading">
+
+                <div>
+
+                    <span class="portfolio-eyebrow">
+                        PROYECTOS DESTACADOS
+                    </span>
+
+                    <h2>
+                        Proyectos que
+                        <span>hablan por sí solos.</span>
+                    </h2>
+
+                </div>
+
+                <p>
+                    Una selección de proyectos donde
+                    transformamos información en herramientas
+                    concretas para tomar decisiones.
+                </p>
+
+            </div>
 
         </div>
 
@@ -185,47 +451,106 @@
         <div class="portfolio-grid">
 
 
-            <!-- PROYECTO 1 -->
-            <div class="portfolio-card">
+            <!-- =================================================
+         PROYECTO 01 — DASHBOARD
+    ================================================== -->
 
-                <div class="portfolio-visual dashboard-preview">
-
-                    <img src="dashboard-ventas.png" alt="Dashboard de Ventas en Power BI">
-
-                </div>
-
-                <h3>Dashboard de Ventas</h3>
-
-                <p>
-                    Visualización de ventas, productos y evolución
-                    mensual para facilitar la toma de decisiones.
-                </p>
-
-                <span class="portfolio-tag">
-                    POWER BI • EXCEL
-                </span>
-
-                <a href="proyecto-ventas.html" class="portfolio-link">
-                    Ver proyecto →
-                </a>
-
-            </div>
-
-
-            <!-- PROYECTO 2 -->
-            <div class="portfolio-card">
+            <article class="portfolio-card portfolio-featured">
 
                 <div class="portfolio-visual">
 
+                    <img src="dashboard-ventas.png" alt="Dashboard de ventas desarrollado en Power BI">
+
+                    <div class="project-overlay">
+
+                        <span>
+                            POWER BI • EXCEL
+                        </span>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="portfolio-content">
+
+                    <div class="portfolio-meta">
+
+                        <span class="portfolio-number">
+                            01
+                        </span>
+
+                        <span class="portfolio-tag">
+                            POWER BI • EXCEL
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Dashboard de Ventas
+                    </h3>
+
+
+                    <p>
+                        Dashboard interactivo para analizar
+                        ventas, productos, regiones, canales
+                        y rentabilidad en un solo lugar.
+                    </p>
+
+
+                    <button class="portfolio-link dashboard-open" type="button" aria-label="Ver Dashboard de Ventas">
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+         PROYECTO 02 — STOCK
+    ================================================== -->
+
+            <article class="portfolio-card">
+
+                <div class="portfolio-visual stock-portfolio-visual">
+
                     <div class="stock-dashboard">
 
-                        <div class="stock-number">
-                            1.248
+                        <div class="stock-top">
+
+                            <span>
+                                INVENTARIO
+                            </span>
+
+                            <span class="stock-status">
+                                ● ACTIVO
+                            </span>
+
                         </div>
 
-                        <div class="stock-label">
-                            Productos en stock
+
+                        <div class="stock-main">
+
+                            <div>
+
+                                <div class="stock-number">
+                                    1.248
+                                </div>
+
+                                <div class="stock-label">
+                                    Productos disponibles
+                                </div>
+
+                            </div>
+
+                            <div class="stock-circle-small">
+                                <span>72%</span>
+                            </div>
+
                         </div>
+
 
                         <div class="stock-progress">
 
@@ -233,198 +558,391 @@
 
                         </div>
 
-                    </div>
 
-                </div>
+                        <div class="stock-footer">
 
-                <h3>Control de Stock</h3>
+                            <span>
+                                Nivel de stock
+                            </span>
 
-                <p>
-                    Organización del inventario e identificación
-                    de productos con alta y baja rotación.
-                </p>
+                            <strong>
+                                72%
+                            </strong>
 
-                <span class="portfolio-tag">
-                    EXCEL • SQL
-                </span>
-
-
-            </div>
-
-
-            <!-- PROYECTO 3 -->
-            <div class="portfolio-card">
-
-                <div class="portfolio-visual">
-
-                    <div class="automation-visual">
-
-                        <div class="automation-box">
-                            📄
-                        </div>
-
-                        <div class="automation-arrow">
-                            →
-                        </div>
-
-                        <div class="automation-box">
-                            ⚙️
-                        </div>
-
-                        <div class="automation-arrow">
-                            →
-                        </div>
-
-                        <div class="automation-box">
-                            📊
                         </div>
 
                     </div>
 
                 </div>
 
-                <h3>Automatización de Procesos</h3>
 
-                <p>
-                    Automatización de tareas repetitivas para
-                    ahorrar tiempo y reducir errores manuales.
-                </p>
+                <div class="portfolio-content">
 
-                <span class="portfolio-tag">
-                    PYTHON • EXCEL
-                </span>
+                    <div class="portfolio-meta">
+
+                        <span class="portfolio-number">
+                            02
+                        </span>
+
+                        <span class="portfolio-tag">
+                            EXCEL • SQL
+                        </span>
+
+                    </div>
 
 
-            </div>
+                    <h3>
+                        Control de Stock
+                    </h3>
 
+
+                    <p>
+                        Sistema de control para visualizar
+                        inventario, niveles de stock y productos
+                        que requieren atención.
+                    </p>
+
+                </div>
+
+            </article>
 
         </div>
 
     </section>
 
+    <!-- =========================================================
+     SOBRE NOSOTROS
+========================================================= -->
 
-    <!-- NOSOTROS -->
     <section id="nosotros" class="about">
 
         <div class="about-content">
 
-            <p class="tag">
-                SOBRE NEXORADATA
-            </p>
+            <div class="section-tag">
+                <span></span>
+                NEXORADATA
+            </div>
 
             <h2>
-                Tu negocio merece más que datos,
-                merece <span>información.</span>
+                Información clara.
+                <span>Decisiones mejores.</span>
             </h2>
 
             <p>
-                En NEXT DATA ayudamos a pequeñas y medianas
-                empresas a transformar datos dispersos en
-                información clara para tomar mejores decisiones.
+                En NEXORADATA ayudamos a empresas a ordenar,
+                analizar y visualizar sus datos para obtener
+                información útil y accionable.
+            </p>
+
+            <p>
+                Combinamos análisis de datos, automatización
+                y visualización para transformar información
+                dispersa en herramientas que faciliten
+                la gestión del negocio.
             </p>
 
         </div>
 
     </section>
 
-    <!-- CONTACTO -->
+    <!-- =========================================================
+     CONTACTO
+========================================================= -->
+
     <section id="contacto" class="contact">
 
-        <div class="contact-content">
+        <div class="contact-container">
+
+
+            <!-- COLUMNA IZQUIERDA -->
 
             <div class="contact-text">
-                <span class="section-tag">CONTACTO</span>
+
+                <div class="section-tag">
+                    <span></span>
+                    CONTACTO
+                </div>
+
 
                 <h2>
-                    ¿Tenés un proyecto
-                    <span>en mente?</span>
+                    Tus datos tienen
+                    <span>más para decir.</span>
                 </h2>
 
-                <p>
-                    Contanos qué necesitás y nos ponemos en contacto
-                    para analizar cómo podemos ayudarte.
+
+                <p class="contact-intro">
+                    Si tenés información pero no sabés cómo
+                    aprovecharla, podemos ayudarte a transformarla
+                    en información clara para tomar mejores decisiones.
                 </p>
-            </div>
 
-            <form class="contact-form" action="https://formspree.io/f/mrpgjbvw" method="POST">
 
-                <div class="form-row">
+                <div class="contact-points">
 
-                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <div class="contact-point">
 
-                    <input type="email" name="email" placeholder="Email" required>
+                        <div class="contact-point-icon">
+                            <span>↗</span>
+                        </div>
+
+                        <div class="contact-point-text">
+
+                            <strong>
+                                Analizamos tu información
+                            </strong>
+
+                            <span>
+                                Ventas, clientes, productos,
+                                stock y más.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-point">
+
+                        <div class="contact-point-icon">
+                            <span>◈</span>
+                        </div>
+
+                        <div class="contact-point-text">
+
+                            <strong>
+                                Convertimos datos en claridad
+                            </strong>
+
+                            <span>
+                                Dashboards y reportes fáciles
+                                de interpretar.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-point">
+
+                        <div class="contact-point-icon">
+                            <span>✓</span>
+                        </div>
+
+                        <div class="contact-point-text">
+
+                            <strong>
+                                Detectamos oportunidades
+                            </strong>
+
+                            <span>
+                                Encontramos información útil
+                                para tu negocio.
+                            </span>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
-                <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" rows="6" required></textarea>
+            </div>
 
-                <button type="submit" class="btn-primary">
-                    Enviar mensaje →
-                </button>
 
-            </form>
+            <!-- FORMULARIO -->
+
+            <div class="contact-form-wrapper">
+
+                <div class="contact-form-top">
+
+                    <div>
+
+                        <span class="contact-form-label">
+                            HABLEMOS
+                        </span>
+
+                        <h3>
+                            Contanos sobre tu proyecto
+                        </h3>
+
+                    </div>
+
+
+                    <div class="contact-status">
+
+                        <span></span>
+                        Disponible
+
+                    </div>
+
+                </div>
+
+
+                <p class="contact-form-description">
+                    Completá el formulario y contanos brevemente
+                    qué necesitás analizar, ordenar o mejorar.
+                </p>
+
+
+                <form class="contact-form" action="https://formspree.io/f/mrpgjbvw" method="POST">
+
+                    <div class="form-row">
+
+                        <div class="form-field">
+
+                            <label for="nombre">
+                                NOMBRE
+                            </label>
+
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="email">
+                                EMAIL
+                            </label>
+
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="mensaje">
+                            ¿EN QUÉ PODEMOS AYUDARTE?
+                        </label>
+
+                        <textarea id="mensaje" name="mensaje"
+                            placeholder="Contanos brevemente qué información necesitás analizar, qué problema querés resolver o qué proceso querés mejorar..."
+                            rows="5" required></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="btn-primary contact-submit">
+
+                        <span class="button-text">
+                            Enviar consulta
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <p class="form-note">
+                        Sin compromiso. Te responderemos
+                        a la brevedad.
+                    </p>
+
+                </form>
+
+            </div>
 
         </div>
 
     </section>
-    <!-- FOOTER -->
+
+    <!-- =========================================================
+     FOOTER
+========================================================= -->
+
     <footer>
 
-        <div>
-            <strong>NEXORADATA</strong>
-        </div>
-
         <p>
-            Transformamos datos en decisiones.
+            © 2026 NEXORADATA. Todos los derechos reservados.
         </p>
 
     </footer>
 
+    <!-- =========================================================
+     SCRIPT
+========================================================= -->
 
-    <script src="script.js"></script>
+    <script>
 
-</body>
-<script>
-    const form = document.querySelector(".contact-form");
+        const form = document.querySelector(".contact-form");
 
-    form.addEventListener("submit", async function (event) {
-        event.preventDefault();
+        if (form) {
 
-        const button = form.querySelector("button");
+            form.addEventListener("submit", async function (event) {
 
-        button.disabled = true;
-        button.textContent = "Enviando...";
+                event.preventDefault();
 
-        const data = new FormData(form);
+                const button = form.querySelector("button");
 
-        try {
-            const response = await fetch(form.action, {
-                method: "POST",
-                body: data,
-                headers: {
-                    "Accept": "application/json"
+                const originalButtonHTML = button.innerHTML;
+
+                button.disabled = true;
+
+                button.innerHTML =
+                    '<span class="button-text">Enviando...</span>';
+
+                const data = new FormData(form);
+
+                try {
+
+                    const response = await fetch(
+                        form.action,
+                        {
+                            method: "POST",
+                            body: data,
+                            headers: {
+                                "Accept": "application/json"
+                            }
+                        }
+                    );
+
+                    if (response.ok) {
+
+                        form.reset();
+
+                        button.innerHTML =
+                            '<span class="button-text">¡Consulta enviada!</span><span class="button-arrow">✓</span>';
+
+                        setTimeout(() => {
+
+                            button.disabled = false;
+
+                            button.innerHTML =
+                                originalButtonHTML;
+
+                        }, 4000);
+
+                    } else {
+
+                        button.disabled = false;
+
+                        button.innerHTML =
+                            '<span class="button-text">Error al enviar</span><span class="button-arrow">×</span>';
+
+                    }
+
+                } catch (error) {
+
+                    button.disabled = false;
+
+                    button.innerHTML =
+                        '<span class="button-text">Error al enviar</span><span class="button-arrow">×</span>';
+
                 }
+
             });
 
-            if (response.ok) {
-                form.reset();
-                button.textContent = "¡Mensaje enviado! ✓";
-
-                setTimeout(() => {
-                    button.disabled = false;
-                    button.textContent = "Enviar mensaje →";
-                }, 4000);
-
-            } else {
-                button.disabled = false;
-                button.textContent = "Error al enviar";
-            }
-
-        } catch (error) {
-            button.disabled = false;
-            button.textContent = "Error al enviar";
         }
-    });
-</script>
+
+    </script>
+
+</body>
 
 </html>

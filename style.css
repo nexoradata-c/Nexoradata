@@ -45,7 +45,7 @@ img {
 
 header {
     width: 100%;
-    height: 80px;
+    height: 68px;
     padding: 0 8%;
 
     display: flex;
@@ -63,7 +63,7 @@ header {
 
 .logo {
     width: 120px;
-    height: 55px;
+    height: 48px;
 
     display: flex;
     align-items: center;
@@ -3203,13 +3203,14 @@ footer {
 @media (max-width: 650px) {
 
     header {
-        height: 70px;
+        height: 64px;
 
         padding: 0 6%;
     }
 
     .logo {
         width: 110px;
+        height: 45px;
     }
 
     .hero {
@@ -3668,6 +3669,8 @@ footer {
         font-size: 9px;
     }
 }
+
+
 /* =========================================================
    VISOR DASHBOARD
 ========================================================= */
@@ -3706,9 +3709,6 @@ footer {
     visibility: visible;
 }
 
-
-/* FONDO */
-
 .dashboard-modal-overlay {
     position: absolute;
     inset: 0;
@@ -3717,9 +3717,6 @@ footer {
 
     backdrop-filter: blur(8px);
 }
-
-
-/* CONTENEDOR */
 
 .dashboard-modal-content {
     position: relative;
@@ -3762,9 +3759,6 @@ footer {
     transform: scale(1);
 }
 
-
-/* IMAGEN */
-
 .dashboard-modal-content img {
     display: block;
 
@@ -3777,9 +3771,6 @@ footer {
 
     border-radius: 10px;
 }
-
-
-/* BOTÓN CERRAR */
 
 .dashboard-modal-close {
     position: absolute;
@@ -3830,17 +3821,9 @@ footer {
     transform: rotate(90deg);
 }
 
-
-/* EVITAR SCROLL CUANDO ESTÁ ABIERTO */
-
 body.dashboard-modal-open {
     overflow: hidden;
 }
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
 
 @media (max-width: 768px) {
 
@@ -3874,7 +3857,6 @@ body.dashboard-modal-open {
         border-radius: 7px;
     }
 }
-
 
 @media (max-width: 480px) {
 

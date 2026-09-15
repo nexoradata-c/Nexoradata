@@ -45,7 +45,7 @@ img {
 
 header {
     width: 100%;
-    height: 76px; /* antes 68px */
+    height: 88px;
     padding: 0 8%;
 
     display: flex;
@@ -62,19 +62,22 @@ header {
 }
 
 .logo {
-    width: 135px; /* antes 120px */
-    height: 54px; /* antes 48px */
+    width: 175px;
+    height: 70px;
 
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .logo img {
+    display: block;
     width: 100%;
     height: 100%;
+    max-width: none;
+    max-height: none;
     object-fit: contain;
 }
-
 nav {
     display: flex;
     align-items: center;

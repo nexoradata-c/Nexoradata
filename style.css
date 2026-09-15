@@ -3944,7 +3944,6 @@ nav .nav-contact:hover span {
 }
 
 /* Línea superior decorativa */
-
 .how-we-work::before {
     content: "";
     position: absolute;
@@ -3953,7 +3952,6 @@ nav .nav-contact:hover span {
     width: 240px;
     height: 2px;
     transform: translateX(-50%);
-
     background: linear-gradient(
         90deg,
         transparent,
@@ -3962,7 +3960,6 @@ nav .nav-contact:hover span {
         #20d9e8,
         transparent
     );
-
     box-shadow: 0 0 22px rgba(32, 217, 232, 0.45);
 }
 
@@ -3983,7 +3980,6 @@ nav .nav-contact:hover span {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-
     margin-bottom: 15px;
 
     color: #20d9e8;
@@ -4049,8 +4045,7 @@ nav .nav-contact:hover span {
     content: "";
 
     position: absolute;
-
-    top: 35px;
+    top: 48px;
     left: 10%;
     right: 10%;
 
@@ -4079,12 +4074,11 @@ nav .nav-contact:hover span {
     min-height: 270px;
     padding: 25px 24px 28px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(15, 32, 51, 0.94),
-            rgba(8, 22, 37, 0.94)
-        );
+    background: linear-gradient(
+        145deg,
+        rgba(15, 32, 51, 0.94),
+        rgba(8, 22, 37, 0.94)
+    );
 
     border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 16px;
@@ -4109,14 +4103,19 @@ nav .nav-contact:hover span {
 
 
 /* =========================================================
-   NÚMERO
+   PARTE SUPERIOR
+   NÚMERO + STICKER EN LA MISMA ALTURA
 ========================================================= */
 
 .process-top {
-    height: 28px;
+    height: 48px;
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 3;
 }
 
 .process-number {
@@ -4129,7 +4128,7 @@ nav .nav-contact:hover span {
 
 
 /* =========================================================
-   INDICADOR VISUAL
+   STICKERS
 ========================================================= */
 
 .process-icon {
@@ -4138,11 +4137,13 @@ nav .nav-contact:hover span {
     width: 48px;
     height: 48px;
 
-    margin: 27px 0 23px;
+    margin: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    flex-shrink: 0;
 
     border-radius: 13px;
 
@@ -4156,10 +4157,12 @@ nav .nav-contact:hover span {
 
     box-shadow:
         inset 0 0 20px rgba(32, 217, 232, 0.025);
+
+    z-index: 3;
 }
 
 
-/* Pequeño punto central */
+/* Punto central del sticker */
 
 .process-icon::before {
     content: "";
@@ -4176,13 +4179,19 @@ nav .nav-contact:hover span {
 }
 
 
-/* Diferenciamos los indicadores */
+/* =========================================================
+   FORMAS DIFERENTES PARA CADA STICKER
+========================================================= */
 
+/* Paso 1 */
 .process-card:nth-child(1) .process-icon {
     border-radius: 50%;
 }
 
+
+/* Paso 2 */
 .process-card:nth-child(2) .process-icon {
+    border-radius: 10px;
     transform: rotate(45deg);
 }
 
@@ -4190,28 +4199,38 @@ nav .nav-contact:hover span {
     transform: rotate(-45deg);
 }
 
+
+/* Paso 3 */
 .process-card:nth-child(3) .process-icon {
     border-radius: 8px;
 }
 
+
+/* Paso 4 */
 .process-card:nth-child(4) .process-icon {
     border-radius: 50%;
 }
 
 
 /* =========================================================
-   TEXTO
+   TÍTULOS
 ========================================================= */
 
 .process-card h3 {
-    margin: 0 0 10px;
+    margin: 25px 0 10px;
 
     color: #ffffff;
 
     font-size: 21px;
     font-weight: 650;
+
     letter-spacing: -0.3px;
 }
+
+
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
 
 .process-card p {
     margin: 0;
@@ -4223,7 +4242,9 @@ nav .nav-contact:hover span {
 }
 
 
-/* Línea inferior */
+/* =========================================================
+   DETALLE INFERIOR DE LAS TARJETAS
+========================================================= */
 
 .process-card::after {
     content: "";
@@ -4267,7 +4288,7 @@ nav .nav-contact:hover span {
 
 
 /* =========================================================
-   MOBILE
+   CELULAR
 ========================================================= */
 
 @media (max-width: 650px) {
@@ -4299,11 +4320,17 @@ nav .nav-contact:hover span {
         padding: 23px 22px 27px;
     }
 
+    .process-top {
+        height: 48px;
+    }
+
     .process-icon {
-        margin: 21px 0 18px;
+        width: 44px;
+        height: 44px;
     }
 
     .process-card h3 {
+        margin-top: 22px;
         font-size: 20px;
     }
 
